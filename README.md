@@ -1,7 +1,5 @@
 # Income tax
 
-## TODO Migrate to aiogram v3 using [Migration FAQ (2.x -> 3.0)](https://docs.aiogram.dev/en/dev-3.x/migration_2_to_3.html) guide.
-
 This repository contains pet project - telegram bot designed for calculating income tax for United Kingdom :)
 
 ### Link to the working telegram bot here - [@income_tax_bot](https://t.me/medication_notification_bot).
