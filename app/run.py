@@ -1,11 +1,12 @@
 from logging.config import dictConfig
+
 from aiogram import types, Dispatcher, Bot
 from fastapi import FastAPI
+
 from app.bot import dp, bot
 from app.config import settings
 from app.log_config import log_config
 from app.loggers import run_log as logger
-
 
 dictConfig(log_config)
 
@@ -31,6 +32,10 @@ async def on_startup():
         ), "Result of `set_webhook` has to be `True`."
         webhook_info = await bot.get_webhook_info()
         logger.info(f"webhook_info updated: {webhook_info}.")
+
+    # Below import is required because handlers for commands has to be loaded.
+    # Otherwise, sending commands will result in nothing.
+    import app.handlers  # noqa: F401
 
 
 @app.post(settings.telegram_webhook_path(), include_in_schema=False)

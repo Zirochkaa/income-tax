@@ -16,6 +16,8 @@ log_config = {
         },
     },
     "loggers": {
+        "handlers.commands": {"handlers": ["default"], "level": "INFO"},
+        "handlers.messages": {"handlers": ["default"], "level": "INFO"},
         "run": {"handlers": ["default"], "level": "INFO"},
     },
 }
