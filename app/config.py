@@ -1,5 +1,3 @@
-from typing import Optional
-
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -9,7 +7,6 @@ class Settings(BaseSettings):
     app_base_url: str
 
     telegram_bot_token: str
-    telegram_channel_id: Optional[int] = None
 
     model_config = SettingsConfigDict(env_file=".env")
 
