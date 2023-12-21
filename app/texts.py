@@ -1,5 +1,5 @@
 start_text = (
-    "Hello, I will help you with calculating income tax for Great Britain (England, Northern Ireland and Wales).\n"
+    "Hello, I will help you with calculating income tax for England, Northern Ireland and Wales.\n"
     "Just send me your annual income (like <code>70000</code> or <code>25000</code>) and "
     "I will calculate how much money you will have left after taxes.\n\n"
     "Here are few related links:\n"

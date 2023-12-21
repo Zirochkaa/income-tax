@@ -1,6 +1,6 @@
 # Income tax
 
-This repository contains pet project - telegram bot designed for calculating income tax for Great Britain (England, Northern Ireland and Wales) :)
+This repository contains pet project - telegram bot designed for calculating income tax for England, Northern Ireland and Wales :)
 
 ### Link to the working telegram bot here - [@income_tax_uk_bot](https://t.me/income_tax_uk_bot).
 
