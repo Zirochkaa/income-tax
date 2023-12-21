@@ -1,3 +1,5 @@
+[![pytest](https://github.com/Zirochkaa/income-tax/actions/workflows/run_tests.yml/badge.svg?branch=master)](https://github.com/Zirochkaa/income-tax/actions/workflows/run_tests.yml)
+
 # Income tax
 
 This repository contains pet project - telegram bot designed for calculating income tax for England, Northern Ireland and Wales :)
