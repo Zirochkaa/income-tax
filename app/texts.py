@@ -15,6 +15,6 @@ calculated_tax_text = (
     "- Higher rate (40%) = <code>£{hrt}</code> (based on <code>£{hrta}</code> of taxable amount)\n"
     "- Additional rate (45%) = <code>£{art}</code> (based on <code>£{arta}</code> of taxable amount)\n\n"
     "Total tax amount = <code>£{tta}</code>\n"
-    "Estimated take-home pay = <code>£{ethp}</code>\n\n"
+    "Estimated take-home pay = <code>£{ethpy}</code>/year or <code>£{ethpm}</code>/month\n\n"
     "<i>Please note that estimated take-home pay does not include deductions for National Insurance.</i>"
 )

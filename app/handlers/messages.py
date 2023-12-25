@@ -49,8 +49,8 @@ async def income_text(message: types.Message):
 
     personal_allowance = excess_amount
 
-    total_tax_amount = basic_rate_tax + higher_rate_tax + additional_rate_tax
-    take_home_pay = annual_income - total_tax_amount
+    total_tax_amount = round(basic_rate_tax + higher_rate_tax + additional_rate_tax, 2)
+    take_home_pay = round(annual_income - total_tax_amount, 2)
     await message.answer(
         text=calculated_tax_text.format(
             annual_income=annual_income,
@@ -62,7 +62,8 @@ async def income_text(message: types.Message):
             art=additional_rate_tax,
             arta=additional_rate_taxable_amount,
             tta=total_tax_amount,
-            ethp=take_home_pay,
+            ethpy=take_home_pay,
+            ethpm=round(take_home_pay / 12, 2),
         ),
     )
 
