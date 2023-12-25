@@ -34,22 +34,22 @@ async def income_text(message: types.Message):
     excess_amount = annual_income
     if excess_amount > hr_limit:
         additional_rate_taxable_amount = excess_amount - hr_limit
-        additional_rate_tax = additional_rate_taxable_amount * ad_tax_rate
+        additional_rate_tax = round(additional_rate_taxable_amount * ad_tax_rate, 2)
         excess_amount = hr_limit
 
     if excess_amount > br_limit:
         higher_rate_taxable_amount = excess_amount - br_limit
-        higher_rate_tax = higher_rate_taxable_amount * hr_tax_rate
+        higher_rate_tax = round(higher_rate_taxable_amount * hr_tax_rate, 2)
         excess_amount = br_limit
 
     if excess_amount > pa_limit:
         basic_rate_taxable_amount = excess_amount - pa_limit
-        basic_rate_tax = basic_rate_taxable_amount * br_tax_rate
+        basic_rate_tax = round(basic_rate_taxable_amount * br_tax_rate, 2)
         excess_amount = pa_limit
 
     personal_allowance = excess_amount
 
-    total_tax_amount = round(basic_rate_tax + higher_rate_tax + additional_rate_tax, 2)
+    total_tax_amount = basic_rate_tax + higher_rate_tax + additional_rate_tax
     take_home_pay = round(annual_income - total_tax_amount, 2)
     await message.answer(
         text=calculated_tax_text.format(
